@@ -1,0 +1,10 @@
+import React from 'react'
+import { Props } from './type'
+
+const Main: React.FC<Props> = ({children, className, style}) => {
+  return (
+    <div className={className} style={style}>{children}</div>
+  )
+}
+
+export default Main

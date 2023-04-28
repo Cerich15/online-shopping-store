@@ -1,0 +1,5 @@
+.right-aside-pane {
+    background-color: rgb(56, 224, 224);
+    height: 90vh;
+    flex-basis: 20%;
+}

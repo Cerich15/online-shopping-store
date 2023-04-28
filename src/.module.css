@@ -1,0 +1,22 @@
+.app-pane {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.main-pane {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-pane .nav-pane {
+    background-color: aquamarine;
+    padding: 15px;
+}
+
+.main-pane .section-pane {
+    background-color: bisque;
+    height: 90vh;
+    flex: 1;
+}
