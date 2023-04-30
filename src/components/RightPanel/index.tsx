@@ -58,10 +58,10 @@ const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
   const getTotalAmount = () => {
     let total = 0
     updatedItemsProp.map(item => (
-      total+=item.unitPrice
+      total = (item.unitPrice * item.quantity) + total
     ))
 
-    return (total * getTotalItems()).toFixed(2)
+    return total.toFixed(2)
   }
 
   const onCheckoutClick = () => {
