@@ -107,7 +107,7 @@ const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
                     <img src={item.imageUrl} alt=''/>
                     <Container className={styles["details"]}>
                       <p>{item.productName}</p>
-                      <h5>{item.unitPrice}</h5>
+                      <h5>₱{item.unitPrice}</h5>
                     </Container>
                     <Container className={styles["quantity"]}>
                       <button onClick={onSetCounter(item.id, "-", item.quantity, itemIndex)}>-</button>
