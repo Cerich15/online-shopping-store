@@ -1,5 +1,208 @@
 .right-aside-pane {
-    background-color: rgb(56, 224, 224);
     height: 90vh;
     flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
+}
+
+
+.right-aside-pane .box {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: row;
+    flex: 1;
+}
+
+.right-aside-pane .box .label {
+    padding: var(--medium);
+    flex: 1;
+}
+
+.right-aside-pane .box .clear {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    flex: 1;
+    padding: var(--small);
+}
+
+.right-aside-pane .box .clear button {
+    cursor: pointer;
+}
+
+.right-aside-pane .box button {
+    height: 2em;
+    font-size: var(--small);
+    white-space: nowrap;
+    padding: var(--small);
+    background-color: var(--orange);
+    border: none;
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    
+}
+
+.right-aside-pane .cart {
+    background-color: var(--yellow);
+    flex: 1;    
+    flex-basis: 50%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.right-aside-pane .checkout-pane {
+    background-color: var(--white);
+    flex: 1;
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px 0 20px 25px;
+    gap: 5px;
+}
+
+.right-aside-pane .checkout-pane .checkout-btn-pane {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 10px ;
+}
+
+.right-aside-pane .checkout-pane button {
+    background-color: var(--yellow);
+    border: none;
+    padding: 10px;
+    font-size: var(--small);
+    border-radius: 5px;
+    width: 50%;
+    height: 2.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right-aside-pane .checkout-pane .total-items-pane {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.right-aside-pane .checkout-pane .total-items-pane h4 {
+    color: var(--orange);
+}
+
+.right-aside-pane .checkout-pane .total-amount-pane h4 {
+    color: var(--orange);
+}
+
+.right-aside-pane .checkout-pane .total-amount-pane {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5em;
+    width: 85%;
+}
+
+.right-aside-pane .cart .cart-item img{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.right-aside-pane .cart .cart-item {
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    gap: 10px;
+    min-height: 10vh;
+}
+
+.right-aside-pane .cart .cart-item .quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 12px; */
+    gap: 0.5em;
+}
+
+.right-aside-pane .cart .cart-item .quantity button {
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.right-aside-pane .cart .cart-item .details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+.right-aside-pane .cart .cart-item .remove-pane {
+    height: 100%;
+    margin-top: -17px;
+    /* flex: 1; */
+}
+
+.right-aside-pane .cart .cart-item .remove-pane .icon {
+    color: red;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    background-color: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.modal .icon-pane {
+    display: flex;
+    justify-content: end;
+}
+
+.modal .icon {
+    color: red;
+    cursor: pointer;
+}
+
+.modal .message-pane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: var(--orange);
 }

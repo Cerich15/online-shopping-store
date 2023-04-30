@@ -12,6 +12,9 @@ const getUniqueCategory = (data:Props | any)  => {
     return unique
 }
 
-
+interface DataPropsArray extends Props {
+    [Symbol.iterator]: () => IterableIterator<DataPropsArray>;
+  }
+  
 export {getUniqueCategory}
-export type {Props as DataProps}
+export type {Props as DataProps, DataPropsArray}

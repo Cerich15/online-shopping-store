@@ -11,12 +11,32 @@
 }
 
 .app-pane .nav-pane {
-    background-color: aquamarine;
+    background-color: var(--bright--yellow);
     padding: 15px;
+    color: white;
 }
 
 .main-pane .section-pane {
-    background-color: bisque;
+    background-color: white;
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
+    gap: 0.5em;
+}
+
+.main-pane .section-pane .sort-pane {
+    font-size: xx-small;
+    width: 73%;
+    display: flex;
+    justify-content: end;
+}
+
+.main-pane .section-pane .sort-pane button {
+    border: none;
+    background: transparent;
+    font-size: xx-small;
+    padding: 10px;
+    cursor: pointer;
 }

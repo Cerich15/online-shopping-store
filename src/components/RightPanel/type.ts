@@ -1,9 +1,10 @@
+import { DataProps } from "../../helper"
+type MyFunctionType = React.MouseEventHandler<HTMLButtonElement> | any;
 type Props = {
-    className?: any;
-    style?: object;
-    children?: React.ReactNode;
-    id?: string;
+    items: DataProps[];
+    setItems: (prev: DataProps[]) => void;
+    isModalOpen: (arg:Boolean) => void;
 
 }
 
-export type {Props}
+export type {Props, MyFunctionType}

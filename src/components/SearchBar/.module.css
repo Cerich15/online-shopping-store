@@ -1,0 +1,15 @@
+.search-bar-pane {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-pane input{
+    outline: none;
+    padding: 10px;
+    flex-basis: 74%;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid black;
+}

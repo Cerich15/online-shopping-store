@@ -1,0 +1,59 @@
+.card-pane {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: scroll;
+    padding: 0 10px;
+    padding-bottom: 20px;
+}
+.card-pane .card-item-pane {
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+    min-height: 7em;
+}
+
+.card-item-pane .img-pane img{
+    width: 5em;
+    height: 5em;
+}
+.card-item-pane .item-desc-pane {
+    font-size: var(--small);
+    flex-basis: 60%;
+}
+
+.card-item-pane .item-desc-pane span {
+    color: var(--black)
+}
+
+.card-item-pane .item-desc-pane h5 {
+    color: var(--orange);
+    text-transform: capitalize;
+}
+
+.card-item-pane .price-pane {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+    /* padding: 2px; */
+}
+
+.card-item-pane .price-pane h4 {
+    color: var(--orange);
+}
+
+.card-item-pane .price-pane button {
+    padding: var(--extra--small);
+    font-weight: 700;
+    font-size: var(--small);
+    background-color: var(--yellow);
+    color: var(--black);
+    border: none;
+    cursor: pointer;
+}

@@ -1,5 +1,5 @@
  .left-aside-pane {
-    background-color: beige;
+    background-color: #FFE6C7;
     height: 90vh;
     flex-basis: 12%;
     white-space: nowrap;
@@ -16,20 +16,22 @@
     flex-direction: column;
     gap: 5px;
     justify-content: start;
-    text-transform: capitalize;
-    background-color:antiquewhite;
     width: 100%;
 }
 
 .left-aside-pane button {
     padding: 2px;
     padding-left: 10px;
-    /* margin-left: 12px; */
     border: none;
     background: transparent;
     width: 100%;
     display: flex;
     justify-content: start;
+    text-transform: capitalize;
+}
+
+.left-aside-pane button:hover {
+    background-color: aquamarine;
 }
 
 .left-aside-pane button:focus {
