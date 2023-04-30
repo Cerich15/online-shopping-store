@@ -8,7 +8,6 @@ import { DataProps } from '../../helper'
 const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
 
   const updatedItemsProp = items.map((item:any) => ({ ...item, quantity: item.quantity ? item.quantity : 1 }));
-  const products: any = localStorage.getItem("products")
   const [modal, setModal] = useState<Boolean>(false)
 
   const onRemoveClick = (id:string, index: number) => () => {
@@ -31,7 +30,6 @@ const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
 
     const updatedItems = [...updatedItemsProp];
     updatedItems[index].quantity = new_quantity;
-    console.log(JSON.parse(products), "<<<< products")
     const localStorageData = JSON.parse(localStorage.getItem("products") || "");
     const itemIndex = localStorageData.findIndex((item: any) => item.id === id);
     
@@ -48,15 +46,6 @@ const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
     setItems(clear)
   }
 
-  const getTotalAmount = () => {
-    let total = 0
-    updatedItemsProp.map(item => (
-      total+=item.unitPrice
-    ))
-
-    return total.toFixed(2)
-  }
-
   const getTotalItems = () => {
     let total = 0
     updatedItemsProp.map(item => (
@@ -66,6 +55,15 @@ const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
     return total
   }
 
+  const getTotalAmount = () => {
+    let total = 0
+    updatedItemsProp.map(item => (
+      total+=item.unitPrice
+    ))
+
+    return (total * getTotalItems()).toFixed(2)
+  }
+
   const onCheckoutClick = () => {
     setModal(!modal)
     onClearCartClick()
@@ -73,7 +71,6 @@ const RightPanel: React.FC<Props> = ({items, setItems, isModalOpen=()=>{}}) => {
 
   const onCloseModal = () => {
     setModal(!modal)
-
   }
 
   const isModal = () => {

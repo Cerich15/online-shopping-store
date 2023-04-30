@@ -61,7 +61,6 @@
 .right-aside-pane .checkout-pane {
     background-color: var(--white);
     flex: 1;
-    flex-basis: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,23 +96,33 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 85%;
 }
 
 .right-aside-pane .checkout-pane .total-items-pane h4 {
     color: var(--orange);
+    flex: 1;
+    font-size:small;
+}
+
+.right-aside-pane .checkout-pane .total-items-pane p {
+    font-size:small;
 }
 
 .right-aside-pane .checkout-pane .total-amount-pane h4 {
     color: var(--orange);
+    flex: 1;
+    font-size:small;
+}
+
+.right-aside-pane .checkout-pane .total-amount-pane p {
+    font-size:small;
 }
 
 .right-aside-pane .checkout-pane .total-amount-pane {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 0.5em;
-    width: 85%;
 }
 
 .right-aside-pane .cart .cart-item img{

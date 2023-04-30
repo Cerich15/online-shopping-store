@@ -61,7 +61,7 @@ const App: React.FC = () => {
   }, []);
 
   const onAddToCart = (content:DataProps) => {
-    setCartItems((prev:DataPropsArray) => [...prev, content])
+    setCartItems([content, ...cartItems])
   }
 
   const onModalOpen = (isOpen: Boolean) => {
